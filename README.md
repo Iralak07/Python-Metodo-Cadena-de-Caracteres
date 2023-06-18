@@ -98,7 +98,17 @@ El módulo os.path proporciona funciones y constantes para trabajar con rutas de
 
  `#` str.lower()
 
-    Retorna una copia de la cadena de caracteres con todas las letras en minúsculas.
+   Retorna una copia de la cadena de caracteres con todas las letras en minúsculas.
     
+      minuscula = 'PalabraEnMINUSCULA'.lower()
+      print(minuscula) # Resultado: palabraenminuscula
    
+   
+  `#`  str.lstrip([chars])
 
+   Retorna una copia de la cadena, eliminado determinados caracteres si se encuentren al principio. El parámetro chars especifica el conjunto de caracteres a eliminar. Si se omite o si se especifica None, se eliminan todos los espacios en blanco. No debe entenderse el valor de chars como un prefijo, sino que se elimina cualquier combinación de sus caracteres:
+   
+    lstrip = 'elimina determinados caracteres si se encuentran al principio'.lstrip('abceli')
+    print(lstrip) # mina determinados caracteres si se encuentran al principio
+ 
+ Es importante tener en cuenta que el método lstrip() no modifica la cadena original, sino que devuelve una nueva cadena con los caracteres eliminados. Si deseas actualizar la variable original, debes asignar el resultado a la misma variable o a una nueva variable.
