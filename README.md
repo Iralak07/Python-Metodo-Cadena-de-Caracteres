@@ -118,5 +118,39 @@ El módulo os.path proporciona funciones y constantes para trabajar con rutas de
 
    Retorna una copia de la cadena con todas las ocurrencias de la cadena old sustituidas por new. Si se utiliza el parámetro count, solo se cambian las primeras count ocurrencias.
    
+    replace = 'Las cadenas de texto pueden ser reemplazados con el metodo replace'.replace('Las cadenas de texto','Los string')
+    print(replace) # Los string pueden ser reemplazados con el metodo replace
+
+`#`  str.split(sep=None, maxsplit=- 1)
+
+    Retorna una lista con las palabras que componen la cadena de caracteres original, usando como separador el valor de sep. Si se utiliza el parámetro maxsplit, se realizan como máximo maxsplit divisiones (por tanto, la lista resultante tendrá maxsplit+1 elementos). Si no se especifica maxsplit o se pasa con valor -1, entonces no hay límite al número de divisiones a realizar (se harán todas las que se puedan).
+
+    Si se especifica sep, las repeticiones de caracteres delimitadores no se agrupan juntos, sino que se considera que están delimitando cadenas vacías (por ejemplo, '1,,2'.split(',') retorna ['1', '', '2']). El parámetro sep puede contener más de un carácter (por ejemplo, '1<>2<>3'.split('<>') retorna ['1', '2', '3']). Dividir una cadena vacía con un separador determinado retornará [''].
+    
+      cadena = '1,2,3,4,5'
+      # retorna una lista, usando el separador ','
+      print(cadena.split(',')) # ['1', '2', '3', '4', '5'] 
+      print(cadena.split(sep=',',maxsplit=2)) # ['1', '2', '3,4,5']
+    
+`#`  str.startswith(prefix[, start[, end]])
+
+    Retorna True si la cadena empieza por prefix, en caso contrario retorna False. El valor de prefix puede ser también una tupla de prefijos por los que buscar. Con el parámetro opcional start, la comprobación empieza en esa posición de la cadena. Con el parámetro opcional end, la comprobación se detiene en esa posición de la cadena.
+    
+    startswith = 'Buscando si la primera palabra de la frase coincide con el indicado, devolviendo True en caso afirmativo o False en caso     contrario'.startswith('Buscando')
+    print(startswith) # Respuesta: True
+    startswith = 'Buscando si la primera palabra de la frase coincide con el indicado, devolviendo True en caso afirmativo o False en caso     contrario'.startswith('si')
+    print(startswith) # Respuesta: False
+    
+`#` str.upper()
+
+    Retorna una copia de la cadena, con todos los caracteres con formas mayúsculas/minúsculas pasados a mayúsculas. Nótese que s.upper().isupper() puede ser False si s contiene caracteres que no tengan las dos formas, o si la categoría Unicode del carácter o caracteres resultantes no es «Lu» (Letra, mayúsculas), sino, por ejemplo, «Lt» (Letra, Título).
+
+    mayuscula = 'mayuscula'.upper()
+    print(mayuscula) # Respuesta: MAYUSCULA
+
+
+
+    
+   
    
 
